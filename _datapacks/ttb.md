@@ -2,6 +2,9 @@
 layout: data_pack
 
 title:  "The Tempest's Box"
+description: "EEEEE"
+og_image: "https://tempestsbox.github.io/assets/logo.png"
+
 supported_versions: [ 1.12, 1.16 ]
 authors: "Andante, Qbert, TheNuclearNexus"
 ---
