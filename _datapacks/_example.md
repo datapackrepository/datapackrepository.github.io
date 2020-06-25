@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data_pack
 
 title: "PACK_TITLE"
 supported_versions: [ 1.13, 1.14, 1.15, 1.16 ]
