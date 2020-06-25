@@ -58,15 +58,18 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 /** Links */
-a {
+a, a > * {
     color: black;
     text-decoration: none;
     transition: color 0.2s ease;
 }
+p a {
+    border-bottom: dotted black 1px;
+}
 a:visited {
     color: black;
 }
-a:hover {
+a:hover, a:hover > * {
     color: rgb(87, 87, 87);
     text-decoration: none;
 }
@@ -78,7 +81,18 @@ a:hover {
 }
 [center] {
     text-align: center;
+}
+[hr] {
     border-bottom: solid black 1px;
+}
+[hr-thick] {
+    border-bottom: solid black 4px;
+}
+[inline] > * {
+    display: inline;
+}
+[inline] * {
+    vertical-align: middle;
 }
 /** Blockquotes */
 blockquote {
@@ -184,8 +198,12 @@ table td {
     margin-bottom: 0;
     float: left;
 }
-.site-title, .site-title:visited {
-    color: #424242;
+.pack-widget {
+    transition: all .5s ease;
+}
+.pack-widget:hover {
+    transform: scale(1.1);
+    border-bottom: none;
 }
 .site-nav {
     float: right;
@@ -386,4 +404,13 @@ img.broken:after {
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */;
+}
+
+div.add-data-pack > p, div.add-data-pack > p > * {
+    font-size: 14px;
+    text-indent: 10px;
+}
+div.add-data-pack > p.dot {
+    font-size: 30px;
+    padding: 0 4px;
 }

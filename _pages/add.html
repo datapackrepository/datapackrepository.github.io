@@ -1,0 +1,62 @@
+---
+layout: default
+
+title: "Add a Data Pack"
+---
+
+<h1 center hr-thick>{{ page.title }}</h1>
+
+<div inline class="add-data-pack">
+    <h1>1</h1><p class="dot">•</p>
+    <p>
+        Create a new file in the <code>_datapacks</code> folder in the Data Pack Repository - <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io/new/master/_datapacks">here</a>
+    </p>
+
+    <br>
+
+    <h1>2</h1><p class="dot">•</p>
+    <p>
+        Name the file <code>pack-id.md</code> - <code>pack-id</code> is what will show as the URL of your pack on this site (<code>{{ site.url}}/data-packs/pack-id</code>)</a>
+    </p>
+
+    <br>
+
+    <h1>3</h1><p class="dot">•</p>
+    <p>
+        Fill in the file contents with this template...
+        <br>
+        <div class="language-markdown highlighter-rouge">
+            <div class="highlight">
+                <pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">PACK_TITLE"</span>
+<span class="na">supported_versions</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">1.13</span><span class="pi">,</span> <span class="nv">1.14</span><span class="pi">,</span> <span class="nv">1.15</span><span class="pi">,</span> <span class="nv">1.16</span> <span class="pi">]</span>
+<span class="na">authors</span><span class="pi">:</span> <span class="s2">"</span><span class="s">A,</span><span class="nv"> </span><span class="s">LIST,</span><span class="nv"> </span><span class="s">OF,</span><span class="nv"> </span><span class="s">AUTHORS"</span>
+<span class="nn">---</span>
+
+Write a full, html/markdown-supported description here!
+</code></pre>
+            </div>
+        </div>
+    </p>
+
+    <h1>4</h1><p class="dot">•</p>
+    <p>
+        Scroll down and click <code>Propose new file</code>
+    </p>
+
+    <br>
+
+    <h1>5</h1><p class="dot">•</p>
+    <p>
+        Confirm by clicking <code><i class="fas fa-code-branch"></i> Create pull request</code>, name the pull request <code>[Data Pack] Your Data Pack Name</code>, and click <code>Create pull request</code> again
+    </p>
+
+    <br>
+
+    <h1>6</h1><p class="dot">•</p>
+    <p>
+        You're done! Just wait for your pack to be approved
+    </p>
+</div>
