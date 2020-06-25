@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% assign pack = page %}
+
+<code style="font-family: monospace;" no-highlight> > <a href="/data-packs">Data Packs</a> > {{ page.title }} </code>
+
+<br>
+<br>
+
+<img src="/assets/thumbnails{{ pack.id }}.png" />
+<h1 center>{{ pack.title }}</h1>
+
+{{ content }}

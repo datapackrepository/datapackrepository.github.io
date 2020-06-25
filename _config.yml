@@ -1,0 +1,20 @@
+# variables
+title: The Data Pack Repository
+description: >-
+  Description
+
+github_username:  datapackrepository
+discord:          xQ4pbqC
+
+# build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+collections:
+  pages:
+    output: true
+    permalink: /:path
+  datapacks:
+    output: true
+    permalink: /data-packs/:path
