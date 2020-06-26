@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="/assets/css/global.css" />
         <link rel="stylesheet" href="/assets/css/code.css" />
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
         <script>
         document.addEventListener("DOMContentLoaded", function (event) {
@@ -43,7 +44,10 @@
     <body>
         <header class="site-header" role="banner">
             <div class="wrapper">
-                <a class="site-title" rel="author" href="{{ site.url }}"><i class="fas fa-folder-open"></i> <p style="display: inline-block;">{{ site.title }}</p></a>
+                <a class="site-title" rel="author" href="{{ site.url }}">
+                    <i class="fas fa-folder-open"></i>
+                    <p style="display: inline-block;">&nbsp;{{ site.title }}</p>
+                </a>
                 <!-- <nav class="site-nav">
                     <input type="checkbox" id="nav-trigger" class="nav-trigger" />
                     <label for="nav-trigger">
