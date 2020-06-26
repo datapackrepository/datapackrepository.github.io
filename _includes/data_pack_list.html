@@ -1,40 +1,42 @@
-<div id="pack-list">
-    <div class="header">
-        <div class="heading">
-            <h2 class="pack-list-heading" id="all">
-                All Data Packs
-                <a class="add-button" href="/add">
-                    <i class="fas fa-plus"></i>
-                </a>
-            </h2>
+<section id="pack-lists" no-highlight>
+    <div id="pack-list">
+        <div class="header">
+            <div class="heading">
+                <h2 class="pack-list-heading" id="all">
+                    All Data Packs
+                    <a class="add-button" href="/add">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </h2>
+            </div>
+            <div class="refiners">
+                <script src="/assets/js/packListSorter.js"></script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function (event) {
+                        updatePackList();
+                    });
+                </script>
+                <select center class="pack-list-sorter" id="pack-list-sorter" onchange="updatePackList()">
+                    <option value="az">Sort A-Z</option>
+                    <option value="za">Sort Z-A</option>
+                </select>
+                <!-- <input class="pack-list-search" id="pack-list-search" placeholder="Search..." oninput="search()" onload="getSearchParam()" /> -->
+            </div>
+            <br>
         </div>
-        <div class="refiners">
-            <script src="/assets/js/packListSorter.js"></script>
-            <script>
-                document.addEventListener("DOMContentLoaded", function (event) {
-                    updatePackList();
-                });
-            </script>
-            <select center class="pack-list-sorter" id="pack-list-sorter" onchange="updatePackList()">
-                <option value="az">Sort A-Z</option>
-                <option value="za">Sort Z-A</option>
-            </select>
-            <!-- <input class="pack-list-search" id="pack-list-search" placeholder="Search..." oninput="search()" onload="getSearchParam()" /> -->
-        </div>
-        <br>
-    </div>
 
-    <ul id="pack-lists">
-        <div class="pack-list" id="list-az">
-            {%- for pack in site.datapacks -%}
-                {% include data_pack_widget.html pack=pack %}
-            {%- endfor -%}
-        </div>
-        <div class="pack-list" id="list-za">
-            {%- assign datapacks = site.datapacks | reverse -%}
-            {%- for pack in datapacks -%}
-                {% include data_pack_widget.html pack=pack %}
-            {%- endfor -%}
-        </div>
-    </ul>
-</div>
+        <ul id="pack-lists">
+            <div class="pack-list" id="list-az">
+                {%- for pack in site.datapacks -%}
+                    {% include data_pack_widget.html pack=pack %}
+                {%- endfor -%}
+            </div>
+            <div class="pack-list" id="list-za">
+                {%- assign datapacks = site.datapacks | reverse -%}
+                {%- for pack in datapacks -%}
+                    {% include data_pack_widget.html pack=pack %}
+                {%- endfor -%}
+            </div>
+        </ul>
+    </div>
+</section>
