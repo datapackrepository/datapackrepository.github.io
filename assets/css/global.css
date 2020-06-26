@@ -237,10 +237,14 @@ table td {
     margin-bottom: 0;
     float: left;
 }
-.pack-widget {
+.pack-list > li {
     transition: all .5s ease;
+    margin-bottom: 10px;
 }
-.pack-widget:hover {
+.pack-list > li, .pack-list > li > *, .pack-list > li > * > * {
+    border-radius: 4px;
+}
+.pack-list > li:hover {
     transform: scale(1.1);
     border-bottom: none;
 }
@@ -373,7 +377,7 @@ table td {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: left;
-    text-align: left;
+    text-align: center;
     list-style: none;
     margin-left: 0;
 }
@@ -409,7 +413,12 @@ table td {
 } */
 @media screen and (max-width: 600px) {
     .pack-list > li {
-        max-width: 49%;
+        max-width: 48%;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .pack-list > li {
+        max-width: 32.5%;
     }
 }
 
