@@ -1,5 +1,26 @@
-<ul class="pack-list">
-    {% for pack in site.datapacks %}
-        {% include data_pack_widget.html pack=pack %}
-    {% endfor %}
-</ul>
+<div class="pack-list">
+    <div class="header">
+        <div class="left">
+            <h2 class="pack-list-heading" id="all">
+                All Data Packs
+                <a class="add-button" href="/add">
+                    <i class="fas fa-plus"></i>
+                </a>
+            </h2>
+        </div>
+        <!-- <div class="right">
+            <select class='textSpace' onchange="loadVersion()">
+                <option value="1.15">Minecraft Java 1.15</option>
+                <option value="1.14">Minecraft Java 1.14</option>
+                <option value="1.13">Minecraft Java 1.13</option>
+                <option value="earlier">Earlier Versions...</option>
+            </select>
+        </div> -->
+    </div>
+
+    <ul class="pack-list">
+        {% for pack in site.datapacks %}
+            {% include data_pack_widget.html pack=pack %}
+        {% endfor %}
+    </ul>
+</div>

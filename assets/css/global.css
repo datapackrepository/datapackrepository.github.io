@@ -229,7 +229,7 @@ table td {
     min-height: 55.95px;
     position: relative;
 }
-.site-title {
+.site-title, .site-title > * {
     font-size: 26px;
     font-weight: 300;
     line-height: 54px;
@@ -251,7 +251,8 @@ table td {
 .add-button {
     font-size: 17px;
     vertical-align: middle;
-    display: inline;
+    border-bottom: solid transparent 1px;
+    display: inline-block;
 }
 /* .site-nav {
     float: right;
@@ -369,8 +370,10 @@ table td {
 }
 .pack-list-heading {
     font-size: 28px;
-    padding-bottom: 4px;
     border-bottom: solid black 3px;
+}
+.pack-list > .header {
+    width: 100%;
 }
 .pack-list {
     display: flex;
@@ -411,14 +414,37 @@ table td {
         font-size: 36px;
     }
 } */
-@media screen and (max-width: 600px) {
-    .pack-list > li {
-        max-width: 48%;
+@media screen {
+    @media (max-width: 400px) {
+        .site-title p {
+            color: transparent;
+            font-size: 0;
+            transition: color 0.5s ease;
+        }
+        .site-title, .site-title > * {
+            margin-bottom: 0;
+        }
+        .pack-list > li {
+            max-width: 100%;
+        }
     }
-}
-@media screen and (min-width: 600px) and (max-width: 1000px) {
-    .pack-list > li {
-        max-width: 32.5%;
+    @media (min-width: 400px) and (max-width: 600px) {
+        .site-title {
+            font-size: 24px;
+        }
+        .pack-list > li {
+            max-width: 48%;
+        }
+    }
+    @media (min-width: 600px) and (max-width: 1000px) {
+        .pack-list > li {
+            max-width: 32.5%;
+        }
+    }
+    @media (max-width: 1000px) {
+        .pack-list {
+            justify-content: center;
+        }
     }
 }
 
