@@ -1,0 +1,115 @@
+body {
+    color: #fdfdfd;
+    background-color: #111;
+}
+
+a, a > * {
+    color: white;
+}
+p a {
+    border-bottom: dotted white 1px;
+}
+a:visited {
+    color: white;
+}
+a:hover, a:hover > * {
+    color: rgb(212, 212, 212);
+}
+
+hr {
+    background-color: #5c5c5c;
+}
+[hr] {
+    border-bottom: solid white 1px;
+}
+[hr-thick] {
+    border-bottom: solid white 4px;
+}
+
+@media screen and (max-width: 800px) {
+    .data-pack-page.header hr {
+        background-color: white;
+    }
+}
+
+button.toggle-theme {
+    background-color: white;
+    color: black;
+}
+
+blockquote {
+    color: #e8e8e8;
+    border-left: 4px solid #464646;
+}
+pre, code {
+    border: 1px solid rgb(65, 65, 65);
+    background-color: rgb(46, 46, 49);
+}
+.highlighter-rouge .highlight {
+    background: rgb(46, 46, 49);
+}
+
+.svg-icon {
+    fill: #828282;
+}
+
+table {
+    color: #3f3f3f;
+}
+table tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+table th {
+    background-color: #f0f0f0;
+    border: 1px solid #dedede;
+    border-bottom-color: #c9c9c9;
+}
+table td {
+    border: 1px solid #e8e8e8;
+}
+
+.site-header {
+    border-top: 5px solid #e8e8e8;
+    border-bottom: 1px solid #424242;
+}
+
+select, input {
+	color: #444;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	background-color: #fff;
+}
+select:hover, input:hover {
+	border-color: #888;
+}
+select:focus, input:focus {
+	border-color: white;
+}
+
+.site-footer {
+    border-top: 1px solid #e8e8e8;
+}
+.footer-col-wrapper {
+    color: #828282;
+}
+
+.pack-list-heading {
+    border-bottom: solid white 3px;
+}
+.pack-list > li {
+    background-color: #494949;
+}
+.pack-versions {
+    color: #000000;
+}
+.pack-authors {
+    color: #828282;
+}
+
+img.broken {
+    color: black;
+    background-color: #616161;
+}
+img.broken:after {
+    color: rgb(185, 185, 185);
+}
